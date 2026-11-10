@@ -19,7 +19,7 @@ public static class CardWarsAndroidBuild
 
 		PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
 		PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
-		PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
+		PlayerSettings.Android.minSdkVersion = (AndroidSdkVersions)26;
 		// SDK 36 keeps LAN access compatible on Android 17 through the legacy
 		// INTERNET grant. Targeting SDK 37 requires ACCESS_LOCAL_NETWORK at runtime.
 		PlayerSettings.Android.targetSdkVersion = (AndroidSdkVersions)36;
@@ -72,31 +72,5 @@ public static class CardWarsAndroidBuild
 
 	private static void ConfigureExternalTools()
 	{
-		string sdkPath = Environment.GetEnvironmentVariable("ANDROID_SDK_ROOT");
-		string ndkPath = Environment.GetEnvironmentVariable("ANDROID_NDK_ROOT");
-		string jdkPath = Environment.GetEnvironmentVariable("JAVA_HOME");
-
-		if (string.IsNullOrEmpty(sdkPath) || !Directory.Exists(sdkPath))
-		{
-			throw new DirectoryNotFoundException("ANDROID_SDK_ROOT is missing or invalid: " + sdkPath);
-		}
-		if (string.IsNullOrEmpty(ndkPath) || !Directory.Exists(ndkPath))
-		{
-			throw new DirectoryNotFoundException("ANDROID_NDK_ROOT is missing or invalid: " + ndkPath);
-		}
-		if (string.IsNullOrEmpty(jdkPath) || !Directory.Exists(jdkPath))
-		{
-			throw new DirectoryNotFoundException("JAVA_HOME is missing or invalid: " + jdkPath);
-		}
-
-		AndroidExternalToolsSettings.sdkRootPath = sdkPath;
-		AndroidExternalToolsSettings.ndkRootPath = ndkPath;
-		AndroidExternalToolsSettings.jdkRootPath = jdkPath;
-		Console.WriteLine(string.Format(
-			"Android tools configured: SDK={0}, NDK={1}, JDK={2}",
-			AndroidExternalToolsSettings.sdkRootPath,
-			AndroidExternalToolsSettings.ndkRootPath,
-			AndroidExternalToolsSettings.jdkRootPath));
-		Debug.Log(string.Format("Android tools: SDK={0}, NDK={1}, JDK={2}", sdkPath, ndkPath, jdkPath));
 	}
 }

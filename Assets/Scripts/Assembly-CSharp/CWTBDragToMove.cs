@@ -93,7 +93,7 @@ public class CWTBDragToMove : MonoBehaviour
 				{
 					GetComponent<Rigidbody>().isKinematic = oldIsKinematic;
 					GetComponent<Rigidbody>().useGravity = oldUseGravity;
-					GetComponent<Rigidbody>().velocity = Vector3.zero;
+					GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
 				}
 			}
 		}

@@ -38,8 +38,7 @@ public class NGUISettings
 
 	static Object GetObject (string name)
 	{
-		int assetID = EditorPrefs.GetInt(name, -1);
-		return (assetID != -1) ? EditorUtility.InstanceIDToObject(assetID) : null;
+		return null;
 	}
 
 	static void Load ()
@@ -81,10 +80,10 @@ public class NGUISettings
 		EditorPrefs.SetString("NGUI Font Name", mFontName);
 		EditorPrefs.SetString("NGUI Atlas Name", mAtlasName);
 		EditorPrefs.SetString("NGUI Selected Sprite", mSpriteName);
-		EditorPrefs.SetInt("NGUI Font Asset", (mFontData != null) ? mFontData.GetInstanceID() : -1);
-		EditorPrefs.SetInt("NGUI Font Texture", (mFontTexture != null) ? mFontTexture.GetInstanceID() : -1);
-		EditorPrefs.SetInt("NGUI Font", (mFont != null) ? mFont.GetInstanceID() : -1);
-		EditorPrefs.SetInt("NGUI Atlas", (mAtlas != null) ? mAtlas.GetInstanceID() : -1);
+		EditorPrefs.SetInt("NGUI Font Asset", -1);
+		EditorPrefs.SetInt("NGUI Font Texture", -1);
+		EditorPrefs.SetInt("NGUI Font", -1);
+		EditorPrefs.SetInt("NGUI Atlas", -1);
 		EditorPrefs.SetInt("NGUI Atlas Padding", mAtlasPadding);
 		EditorPrefs.SetBool("NGUI Atlas Trimming", mAtlasTrimming);
 		EditorPrefs.SetBool("NGUI Atlas PMA", mAtlasPMA);
@@ -92,7 +91,7 @@ public class NGUISettings
 		EditorPrefs.SetBool("NGUI Force Square Atlas", mForceSquare);
 		EditorPrefs.SetInt("NGUI Pivot", (int)mPivot);
 		EditorPrefs.SetInt("NGUI Layer", mLayer);
-		EditorPrefs.SetInt("NGUI DynFont", (mDynFont != null) ? mDynFont.GetInstanceID() : -1);
+		EditorPrefs.SetInt("NGUI DynFont", -1);
 		EditorPrefs.SetInt("NGUI DynFontSize", mDynFontSize);
 		EditorPrefs.SetInt("NGUI DynFontStyle", (int)mDynFontStyle);
 
