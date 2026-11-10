@@ -1,32 +1,32 @@
-# Card Wars
+# Adventure Time: Card Wars
 
-*Adventure Time: CARD WARS* - Porting moderno per Android (ARM64) e Linux Standalone Nativo (x86_64).
+*Adventure Time: CARD WARS* — Modernized port for modern Android (ARM64) and Native Standalone Linux (x86_64).
 
 Floop the Pig! It's Adventure Time CARD WARS! Play the game inspired by the Adventure Time episode, 'Card Wars'! Summon creatures and cast spells to battle your way to victory.
 
 ---
 
-## 🌟 Novità e Migliorie di questo repository
+## 🌟 Highlights & Features of this Repository
 
-- **Versione Linux Nativa (x86_64)**: giocabile nativamente su distribuzioni Linux moderne senza bisogno di emulatori o Wine.
-- **Supporto Android Moderno (ARM64 / IL2CPP)**: compatibile con Android 13, 14, 15+ sui telefoni moderni a 64-bit.
-- **Multigiocatore LAN in tempo reale**: sostituisce i server online originali (spenti) con una lobby locale (LAN / Wi-Fi) per giocare con altri amici.
-- **Mod Sblocco Contenuti & Turbo Mode**: carte, eroi e dungeon sbloccati con supporto a profili e bilanciamento personalizzabile.
-- **Compatibilità con Unity 6 e Unity 2022.3 LTS**: codice aggiornato e correzione delle funzioni e attributi deprecati (Roslyn, EntityId, Texture Importers).
-
----
-
-## 📦 Download
-
-* **[Versione Linux Nativa (x86_64)](https://github.com/PrimoVeneroso/CardWarsOriginal/releases)**
-* **[Versione Android ARM64](https://github.com/Thecris28/Card-Wars-ARM64-Android/releases)**
-* **[Versione Windows (Legacy)](https://github.com/ThugRod/CardWarsOriginal/releases/download/latest/CardWars-Windows.zip)**
+- **Native Standalone Linux (x86_64)**: Runs natively on modern Linux distributions with OpenGL/Vulkan GPU acceleration without Wine or emulators.
+- **Modern Android Support (ARM64 / IL2CPP)**: Fully compatible with 64-bit-only devices running Android 13, 14, 15, and newer.
+- **Real-Time LAN Multiplayer**: Replaces the discontinued official online servers with a local Wi-Fi / LAN lobby to play with friends on the same network.
+- **Unlocked Content & Turbo Mode**: Optional mod support enabling all cards, heroes, dungeons, customizable profiles, and faster gameplay pacing.
+- **Unity 6 & Unity 2022.3 LTS Compatibility**: Codebase updated to modern C# standards; resolved all Roslyn compilation issues, modern `EntityId` migrations, and updated AssetDatabase APIs.
 
 ---
 
-## 🐧 Eseguire la versione Linux
+## 📦 Downloads
 
-Dopo aver scaricato o compilato la cartella di build:
+* **[Latest Native Linux Release (x86_64)](https://github.com/PrimoVeneroso/CardWarsOriginal/releases)**
+* **[Latest Android APK (ARM64)](https://github.com/Thecris28/Card-Wars-ARM64-Android/releases)**
+* **[Windows Standalone (Legacy)](https://github.com/ThugRod/CardWarsOriginal/releases/download/latest/CardWars-Windows.zip)**
+
+---
+
+## 🐧 Running the Native Linux Build
+
+After downloading or compiling the standalone package:
 ```bash
 chmod +x card_wars_linux.x86_64
 ./card_wars_linux.x86_64
@@ -34,21 +34,21 @@ chmod +x card_wars_linux.x86_64
 
 ---
 
-## 🛠️ Compilazione da codice sorgente
+## 🛠️ Building from Source
 
-1. Apri la cartella del progetto con **Unity Hub** (versione supportata: Unity 2022.3 LTS oppure Unity 6).
-2. Vai su **File > Build Profiles**:
-   - Per **Linux**: seleziona *Linux*, architettura *x86_64* e premi **Build**.
-   - Per **Android**: seleziona *Android* (assicurati di aver installato i moduli Android Build Support, OpenJDK e NDK) e premi **Build**.
+1. Open the project in **Unity Hub** using **Unity 2022.3 LTS** or **Unity 6 (6000.x)**.
+2. Open **File > Build Profiles**:
+   - **For Linux**: Select *Linux*, choose architecture *x86_64*, and click **Build**.
+   - **For Android**: Select *Android* (ensure Android Build Support, OpenJDK, and NDK modules are installed) and click **Build**.
 
 ---
 
-## 🏆 Crediti e Riconoscimenti
+## 🏆 Credits & Acknowledgements
 
-Un sincero ringraziamento a tutte le persone e community che hanno reso possibile preservare e far rivivere questo gioco:
+This revival is a community-driven preservation effort. Sincere thanks to everyone who contributed to keeping this beloved game alive:
 
-- **Cartoon Network & Kung Fu Factory**: Sviluppatori e ideatori originali del gioco. Tutti i diritti, loghi, personaggi, musiche e asset appartengono a loro.
-- **[ThugRod](https://github.com/ThugRod)**: Per il fondamentale lavoro iniziale di decompilazione, ripristino del codice sorgente su Unity e prima versione PC Windows.
-- **[yahirmonogatar12](https://github.com/yahirmonogatar12)**: Per l'implementazione del multigiocatore LAN in tempo reale, la mod di sblocco carte/contenuti, il supporto a risoluzioni orizzontali e gli script di esportazione ARM64.
-- **[Thecris28](https://github.com/Thecris28)**: Per il mantenimento e pubblicazione continuativa delle build Android ARM64 e del tool Card Wars Save Decoder.
-- **[PrimoVeneroso](https://github.com/PrimoVeneroso)**: Per il porting, risoluzione errori di compatibilità su Unity 6 e creazione della build nativa per Linux x86_64.
+- **Cartoon Network & Kung Fu Factory**: The original creators, artists, voice actors, and developers of *Adventure Time: Card Wars*. All intellectual property, trademarks, characters, music, and art assets belong to them.
+- **[ThugRod](https://github.com/ThugRod)**: For the foundational decompilation work, restoring the Unity project, fixing shader compatibility, and providing the initial Windows port.
+- **[yahirmonogatar12](https://github.com/yahirmonogatar12)**: For engineering real-time LAN multiplayer, implementing the unlocked-content mod, landscape viewport adaptations, and ARM64 headless export tools.
+- **[Thecris28](https://github.com/Thecris28)**: For ongoing maintenance, publishing modern Android ARM64 builds, and authoring the Card Wars Save Decoder.
+- **[PrimoVeneroso](https://github.com/PrimoVeneroso)**: For porting, resolving compilation errors on Unity 6, and producing the native standalone GNU/Linux x86_64 release.
